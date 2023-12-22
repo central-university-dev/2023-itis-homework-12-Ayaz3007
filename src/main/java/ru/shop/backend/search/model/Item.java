@@ -13,6 +13,9 @@ import javax.persistence.Id;
 @Setter
 @Entity
 public class Item {
+    @Id
+    @Column
+    private Integer itemId;
     @Column
     private Integer price;
     @Column
@@ -21,8 +24,6 @@ public class Item {
     private String url;
     @Column
     private String image;
-    @Id
-    @Column
-    private Integer itemId;
-    private String cat;
+    @Column(name = "cat")
+    private String catalogue;
 }

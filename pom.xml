@@ -13,8 +13,15 @@
 
     <artifactId>search</artifactId>
     <groupId>ru.shop.site.backend</groupId>
-
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>11</java.version>
+        <docker.image.prefix>shop</docker.image.prefix>
+        <springdoc.version>1.0.0</springdoc.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -33,7 +40,6 @@
             <version>2.2.0</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
@@ -70,13 +76,7 @@
     </dependencies>
 
 
-    <properties>
-        <java.version>11</java.version>
-        <docker.image.prefix>shop</docker.image.prefix>
-        <springdoc.version>1.0.0</springdoc.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
+
     <build>
 
         <plugins>

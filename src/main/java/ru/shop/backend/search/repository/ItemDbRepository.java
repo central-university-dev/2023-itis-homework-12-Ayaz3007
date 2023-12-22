@@ -14,8 +14,7 @@ public interface ItemDbRepository  extends JpaRepository<ItemEntity, Long> {
             "where i.item_id in  :ids", nativeQuery = true)
     List<Object[]> findByIds(Integer regionId, List<Long> ids);
 
-    @Query(value = "" +
-            "select item_id from item_sku where sku = ?", nativeQuery = true)
+    @Query(value = "select item_id from item_sku where sku = ?", nativeQuery = true)
     List<Integer> findBySku(String parseInt);
 
     @Query(value = "" +

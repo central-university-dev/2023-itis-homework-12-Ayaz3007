@@ -8,7 +8,7 @@ import ru.shop.backend.search.model.ItemElastic;
 
 import java.util.List;
 
-public interface ItemRepository extends ElasticsearchRepository<ItemElastic, Integer> {
+public interface ItemElasticRepository extends ElasticsearchRepository<ItemElastic, Integer> {
 
 
     @Query("{\n" +
