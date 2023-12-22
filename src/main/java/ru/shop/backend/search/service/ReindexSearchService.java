@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import ru.shop.backend.search.model.ItemElastic;
 import ru.shop.backend.search.repository.ItemDbRepository;
-import ru.shop.backend.search.repository.ItemRepository;
+import ru.shop.backend.search.repository.ItemElasticRepository;
 
 import javax.transaction.Transactional;
 
@@ -15,7 +15,7 @@ import javax.transaction.Transactional;
 @Slf4j
 public class ReindexSearchService {
     private final ItemDbRepository dbRepository;
-    private final ItemRepository searchRepository;
+    private final ItemElasticRepository searchRepository;
     @Scheduled(fixedDelay = 43200000)
     @Transactional
     public void reindex(){

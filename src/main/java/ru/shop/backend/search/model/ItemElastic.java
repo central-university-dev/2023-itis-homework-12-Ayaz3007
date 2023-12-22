@@ -14,13 +14,14 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Arrays;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(indexName = "item", createIndex = true)
+@Document(indexName = "item")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemElastic {
@@ -70,6 +71,6 @@ public class ItemElastic {
                         return null;
                     return d.replace(":","");
                 }
-        ).filter( d -> d != null).collect(Collectors.joining());
+        ).filter(Objects::nonNull).collect(Collectors.joining());
     }
 }

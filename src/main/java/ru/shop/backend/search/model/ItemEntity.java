@@ -13,6 +13,8 @@ import javax.persistence.Table;
 @Getter
 @Setter
 public class ItemEntity {
+    @Id
+    private long itemId;
     private String name;
     private String brand;
     private String catalogue;
@@ -20,6 +22,4 @@ public class ItemEntity {
     private String description;
     private long brandId;
     private long catalogueId;
-    @Id
-    private long itemId;
 }
